@@ -1,0 +1,10 @@
+rules:
+  - id: custom-no-eval
+    pattern: eval(...)
+    message: "Использование eval() небезопасно — потенциал RCE"
+    languages: [javascript, typescript]
+    severity: ERROR
+    metadata:
+      category: security
+      cwe: "CWE-95"
+      owasp: "A03:2021 - Injection"
